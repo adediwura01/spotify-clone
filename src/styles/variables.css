@@ -1,0 +1,28 @@
+:root {
+  /* Colors */
+  --spotify-green: #1DB954;
+
+  --background-primary: #121212;
+  --background-secondary: #181818;
+  --background-tertiary: #242424;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #B3B3B3;
+
+  --border-color: #2A2A2A;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  /* Transition */
+  --transition: 0.3s ease;
+}

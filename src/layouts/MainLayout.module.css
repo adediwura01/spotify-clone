@@ -1,0 +1,53 @@
+.layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  grid-template-rows: 1fr 90px;
+  height: 100vh;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+}
+
+.sidebar {
+  background: var(--background-secondary);
+  border-radius: var(--radius-md);
+
+  min-height: 0;
+  overflow: hidden;
+}
+
+.mainSection {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  height: 70px;
+  background: var(--background-secondary);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-sm);
+
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-lg);
+}
+
+.content {
+  flex: 1;
+  background: var(--background-secondary);
+  border-radius: var(--radius-md);
+  overflow-y: auto;
+  padding: var(--space-lg);
+}
+
+.player {
+  grid-column: 1 / -1;
+
+  background: var(--background-secondary);
+
+  border-radius: var(--radius-md);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

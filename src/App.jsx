@@ -1,6 +1,7 @@
-function App() {
+import AppRoutes from "./routes/AppRoutes";
 
-  return <h1>Spotify Clone 🎵</h1>;
+function App() {
+  return <AppRoutes />;
 }
 
 export default App;

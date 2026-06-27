@@ -1,0 +1,252 @@
+.sidebar {
+  height: 100%;
+  padding: var(--space-lg);
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 0;
+  overflow: hidden;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 3rem;
+}
+
+.logoIcon {
+  font-size: 2.8rem;
+  color: var(--spotify-green);
+  margin-top: 2px;
+}
+
+.logoText h2 {
+  margin: 0;
+  line-height: 1;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.navList {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+
+  padding: 14px 18px 14px 14px;
+
+  border-radius: var(--radius-sm);
+
+  text-decoration: none;
+
+  color: var(--text-secondary);
+
+  transition:
+  background-color 0.25s ease,
+  color 0.25s ease,
+  transform 0.25s ease;
+}
+
+.navLink:hover {
+  background: var(--hover-background);
+  color: white;
+  transform: translateX(3px);
+}
+
+.active {
+  background: rgba(29, 185, 84, 0.12);
+  color: var(--text-primary);
+
+  border-left: 4px solid var(--spotify-green);
+}
+
+.icon {
+  font-size: 1.3rem;
+  min-width: 22px;
+}
+
+.library {
+  margin-top: 2rem;
+}
+
+.libraryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1rem;
+}
+
+.libraryTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.addButton {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  outline: none;
+
+  border-radius: 50%;
+
+  background: transparent;
+  color: var(--text-secondary);
+
+  cursor: pointer;
+
+  transition:
+    background-color .2s ease,
+    color .2s ease,
+    transform .2s ease;
+}
+
+.addButton:hover {
+  background: var(--hover-background);
+  color: white;
+}
+
+.addButton:active {
+  transform: scale(.92);
+}
+
+.libraryActions {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.libraryItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 100%;
+
+  padding: 12px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: var(--text-secondary);
+
+  cursor: pointer;
+
+  transition:
+    background-color .25s ease,
+    color .25s ease;
+}
+
+.libraryItem:hover {
+  background: var(--hover-background);
+  color: white;
+}
+
+.likedIcon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 8px;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #2563eb
+  );
+}
+
+.playlists {
+  margin-top: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.playlistItem {
+  width: 100%;
+
+  padding: 10px 12px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: var(--text-secondary);
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background-color .25s ease,
+    color .25s ease;
+}
+
+.playlistItem:hover {
+  background: var(--hover-background);
+  color: white;
+}
+
+.playlistHeading {
+  margin-bottom: 0.75rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+}
+
+.playlistContainer {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 1rem;
+  min-height: 0;
+}
+
+.playlistContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.playlistContainer::-webkit-scrollbar-thumb {
+  background: #5a5a5a;
+}
+
+.playlistContainer::-webkit-scrollbar-thumb:hover {
+  background: #7a7a7a;
+}
+
+.librarySection {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    margin-top: 2rem;
+}

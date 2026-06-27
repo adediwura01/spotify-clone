@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  padding: 2rem;
+
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #2563eb
+  );
+}
+
+.iconBox {
+  width: 150px;
+  height: 150px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,.15);
+
+  font-size: 4rem;
+
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  margin: .5rem 0;
+}
+
+.smallText {
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.description {
+  color: rgba(255,255,255,.8);
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 4rem;
+
+  border-radius: 18px;
+
+  background: var(--background-secondary);
+}
+
+.emptyState h2 {
+  margin-bottom: 1rem;
+}
+
+.emptyState p {
+  max-width: 500px;
+  color: var(--text-secondary);
+}
