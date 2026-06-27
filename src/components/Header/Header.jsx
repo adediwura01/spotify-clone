@@ -6,16 +6,20 @@ import {
 } from "react-icons/fi";
 import { FaRegUserCircle } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
+
+
 
 function Header() {
+  const navigate = useNavigate();
   return (
     <header className={styles.header}>
       <div className={styles.left}>
-        <button className={styles.navButton}>
+        <button className={styles.navButton} onClick={() => navigate(-1)}>
           <FiChevronLeft />
         </button>
 
-        <button className={styles.navButton}>
+        <button className={styles.navButton} onClick={() => navigate(1)}>
           <FiChevronRight />
         </button>
       </div>
@@ -26,6 +30,7 @@ function Header() {
         <input
           type="text"
           placeholder="What do you want to play?"
+          aria-label="Search music"
         />
       </div>
 
@@ -35,7 +40,7 @@ function Header() {
         </button>
 
         <button className={styles.profileButton}>
-          <FaRegUserCircle />
+          <span>A</span>
         </button>
       </div>
     </header>
