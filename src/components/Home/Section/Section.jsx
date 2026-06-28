@@ -14,13 +14,11 @@ function Section({ title, playlists }) {
 
       <div className={styles.grid}>
         {playlists.map((playlist) => (
-          <PlaylistCard
-            key={playlist.id}
-            title={playlist.title}
-            description={playlist.description}
-            image={playlist.image}
-          />
-        ))}
+        <PlaylistCard
+          key={playlist.id}
+          playlist={playlist}
+        />
+))}
       </div>
     </section>
   );

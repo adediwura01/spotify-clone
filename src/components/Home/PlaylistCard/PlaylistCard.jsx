@@ -1,13 +1,19 @@
 import styles from "./PlaylistCard.module.css";
 import { FaPlay } from "react-icons/fa";
+import { usePlayer } from "../../../context/PlayerContext";
 
-function PlaylistCard({ title, description, image }) {
+function PlaylistCard({ playlist }) {
+  const { playSong } = usePlayer();
+
   return (
-    <article className={styles.card}>
+    <article
+      className={styles.card}
+      onClick={() => playSong(playlist)}
+    >
       <div className={styles.cover}>
         <img
-          src={image}
-          alt={title}
+          src={playlist.image}
+          alt={playlist.title}
           className={styles.image}
         />
 
@@ -16,9 +22,9 @@ function PlaylistCard({ title, description, image }) {
         </button>
       </div>
 
-      <h3>{title}</h3>
+      <h3>{playlist.title}</h3>
 
-      <p>{description}</p>
+      <p>{playlist.description}</p>
     </article>
   );
 }

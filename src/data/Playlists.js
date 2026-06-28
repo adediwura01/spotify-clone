@@ -8,12 +8,14 @@ const playlists = [
     id: 1,
     title: "Today's Top Hits",
     description: "The biggest songs right now.",
+    artist: "Spotify",
     image: topHits,
   },
   {
     id: 2,
     title: "Coding Session",
     description: "Focus while you build.",
+    artist: "Spotify",
     image: coding,
   },
   {
@@ -21,12 +23,14 @@ const playlists = [
     title: "Workout Mix",
     description: "Push harder every day.",
     image: workout,
+    artist: "Spotify",
   },
   {
     id: 4,
     title: "Afrobeats Mix",
     description: "Fresh vibes from Africa.",
     image: afrobeats,
+    artist: "Spotify",
   },
 ];
 

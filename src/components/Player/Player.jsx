@@ -2,17 +2,17 @@ import styles from "./Player.module.css";
 import SongInfo from "./SongInfo";
 import PlaybackControls from "./PlaybackControls";
 import ExtraControls from "./ExtraControls";
-
-import topHits from "../../assets/images/playlists/top-hits.jpg";
+import { usePlayer } from "../../context/PlayerContext";
 
 function Player() {
+    const { currentSong } = usePlayer();
   return (
     <div className={styles.player}>
       <SongInfo
-        title="Today's Top Hits"
-        artist="Spotify"
-        cover={topHits}
-      />
+  title={currentSong.title}
+  artist={currentSong.artist}
+  cover={currentSong.image}
+/>
 
       <div className={styles.center}>
         <PlaybackControls/>
