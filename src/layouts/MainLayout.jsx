@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import styles from "./MainLayout.module.css";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Header from "../components/Header/Header";
+import Player from "../components/Player/Player";
 function MainLayout() {
   return (
     <div className={styles.layout}>
@@ -20,7 +21,7 @@ function MainLayout() {
       </div>
 
       <footer className={styles.player}>
-        Player
+        <Player />
       </footer>
     </div>
   );

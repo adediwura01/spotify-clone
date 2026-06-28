@@ -1,0 +1,192 @@
+.player {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+
+  padding: 0 1.5rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.songInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cover {
+  width: 56px;
+  height: 56px;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+
+  flex-shrink: 0;
+  transition: transform .25s ease;
+}
+
+
+.songInfo:hover .cover {
+  transform: scale(1.05);
+}
+
+.songDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.songDetails h4 {
+  margin: 0;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  color: var(--text-primary);
+}
+
+.songDetails p {
+  margin-top: 4px;
+
+  font-size: 0.8rem;
+
+  color: var(--text-secondary);
+}
+
+.likeButton {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: var(--text-secondary);
+
+  cursor: pointer;
+
+  transition:
+    background-color .25s ease,
+    color .25s ease,
+    transform .2s ease;
+}
+
+.likeButton:hover {
+  background: var(--hover-background);
+  color: white;
+}
+
+.likeButton:active {
+  transform: scale(.92);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .8rem;
+}
+
+.buttonRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.controlButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 36px;
+  height: 36px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: var(--text-secondary);
+
+  cursor: pointer;
+
+  font-size: 1.1rem;
+
+  transition:
+    color .25s ease,
+    transform .2s ease;
+}
+
+.controlButton:hover {
+  color: white;
+  transform: scale(1.08);
+}
+
+.playButton {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: white;
+  color: black;
+
+  cursor: pointer;
+
+  font-size: 1.4rem;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.playButton:hover {
+  transform: scale(1.08);
+
+  box-shadow:
+    0 8px 24px rgba(255,255,255,.25);
+}
+
+.progressRow {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  width: 100%;
+}
+
+.progressRow span {
+  font-size: .75rem;
+  color: var(--text-secondary);
+  min-width: 36px;
+}
+
+.progress {
+  flex: 1;
+  accent-color: white;
+  cursor: pointer;
+}
