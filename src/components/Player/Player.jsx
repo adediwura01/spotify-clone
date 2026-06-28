@@ -1,6 +1,7 @@
 import styles from "./Player.module.css";
 import SongInfo from "./SongInfo";
 import PlaybackControls from "./PlaybackControls";
+import ExtraControls from "./ExtraControls";
 
 import topHits from "../../assets/images/playlists/top-hits.jpg";
 
@@ -18,7 +19,7 @@ function Player() {
       </div>
 
       <div className={styles.right}>
-        Extra Controls
+        <ExtraControls/>
       </div>
     </div>
   );

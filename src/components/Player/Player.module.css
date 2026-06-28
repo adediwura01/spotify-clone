@@ -187,6 +187,82 @@
 
 .progress {
   flex: 1;
-  accent-color: white;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 999px;
+  background: #4d4d4d;
   cursor: pointer;
+  outline: none;
+}
+
+.progress::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 999px;
+}
+
+.progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  margin-top: -4px;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+.progress:hover::-webkit-slider-thumb {
+  opacity: 1;
+}
+
+.extraControls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.volumeContainer {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.volumeIcon {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.volumeSlider {
+  width: 100px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: #4d4d4d;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.volumeSlider::-webkit-slider-runnable-track {
+  height: 4px;
+}
+
+.volumeSlider:hover::-webkit-slider-thumb {
+  opacity: 1;
+}
+
+.volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  margin-top: -4px;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+.volumeContainer:hover .volumeIcon {
+  color: white;
 }
