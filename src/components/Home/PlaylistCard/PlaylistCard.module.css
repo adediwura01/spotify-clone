@@ -12,22 +12,25 @@
 }
 
 .card:hover {
-  background: rgba(255,255,255,.06);
-  transform: translateY(-4px);
+  background: rgba(255,255,255,.08);
+
+  transform:
+      translateY(-6px)
+      scale(1.02);
 }
 
 .cover {
-  position: relative;
-  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .image {
   width: 100%;
   aspect-ratio: 1;
-
   object-fit: cover;
 
-  border-radius: 12px;
+  transition:
+      transform .4s ease;
 }
 
 .playButton {
@@ -56,11 +59,26 @@
   transform: translateY(10px);
 
   transition: all .25s ease;
+  box-shadow:
+      0 10px 30px rgba(0,0,0,.35);
+
+  transition:
+      opacity .25s ease,
+      transform .25s ease,
+      background-color .25s ease;
+}
+
+.playButton:hover {
+  transform: scale(1.08);
 }
 
 .card:hover .playButton {
   opacity: 1;
   transform: translateY(0);
+}
+
+.card:hover .image {
+  transform: scale(1.05);
 }
 
 .card h3 {

@@ -21,7 +21,7 @@ function Home() {
         playlists={recentlyPlayed}
       />
       <Section
-        title="Trending now"
+        title="Trending Now"
         playlists={trendingNow}
       />
     </>
