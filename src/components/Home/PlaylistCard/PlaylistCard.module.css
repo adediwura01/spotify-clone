@@ -1,0 +1,84 @@
+.card {
+  padding: 1rem;
+  border-radius: 14px;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  transition:
+    background-color .25s ease,
+    transform .25s ease;
+}
+
+.card:hover {
+  background: rgba(255,255,255,.06);
+  transform: translateY(-4px);
+}
+
+.cover {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 1;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+}
+
+.playButton {
+  position: absolute;
+
+  right: 12px;
+  bottom: 12px;
+
+  width: 48px;
+  height: 48px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: var(--spotify-green);
+
+  color: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(10px);
+
+  transition: all .25s ease;
+}
+
+.card:hover .playButton {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin-bottom: .4rem;
+
+  color: white;
+}
+
+.card p {
+  font-size: .9rem;
+  color: var(--text-secondary);
+
+  line-height: 1.5;
+}
+
+.playButton {
+  /* existing styles... */
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}

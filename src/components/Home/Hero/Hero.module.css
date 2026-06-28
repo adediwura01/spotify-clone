@@ -1,0 +1,65 @@
+.hero {
+  padding: 2.5rem;
+
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(29, 185, 84, .18),
+    rgba(29, 185, 84, .05)
+  );
+
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: .75rem;
+}
+
+.hero p {
+  max-width: 600px;
+
+  color: var(--text-secondary);
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Spaces out text and icon */
+}
+
+.greetingIcon {
+  font-size: 1.2em; /* Scales dynamically with text size */
+  vertical-align: middle;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.greetingIcon {
+  font-size: 1.2em;
+  transition: color 0.3s ease; /* Smooth transition if time changes */
+}
+
+/* 🌅 Soft, warm amber gold for morning energy */
+.morning {
+  color: #d97706; 
+}
+
+/* 🌤️ Balanced, crisp copper orange for productive afternoons */
+.afternoon {
+  color: #ea580c; 
+}
+
+/* 🌙 Deep slate blue or elegant indigo for relaxed evening vibes */
+.evening {
+  color: #6366f1; 
+}

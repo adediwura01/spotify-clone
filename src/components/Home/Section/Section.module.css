@@ -1,0 +1,42 @@
+.section {
+  margin-bottom: 3rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1.5rem;
+}
+
+.header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.showAll {
+  background: transparent;
+  border: none;
+
+  color: var(--text-secondary);
+
+  cursor: pointer;
+
+  font-size: .9rem;
+  font-weight: 600;
+
+  transition: color .25s ease;
+}
+
+.showAll:hover {
+  color: white;
+}
+
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+
+  gap: 1.5rem;
+}
