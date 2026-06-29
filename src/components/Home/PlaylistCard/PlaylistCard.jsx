@@ -1,14 +1,21 @@
 import styles from "./PlaylistCard.module.css";
 import { FaPlay } from "react-icons/fa";
 import { usePlayer } from "../../../context/PlayerContext";
+import { motion } from "framer-motion";
+import {cardVariants, playButtonVariants,} from "../../../animations";
 
 function PlaylistCard({ playlist }) {
   const { playSong } = usePlayer();
   const { isPlaying, togglePlay } = usePlayer();
 
   return (
-    <article
-      className={styles.card}
+    <motion.article
+     className={styles.card}
+      variants={cardVariants}
+      initial="hidden"
+      animate="visible"
+      whileHover="hover"
+      whileTap="tap"
     >
       <div className={styles.cover}>
         <img
@@ -17,18 +24,20 @@ function PlaylistCard({ playlist }) {
           className={styles.image}
         />
 
-        <button className={styles.playButton}  onClick={(e) => {
+        <motion.button className={styles.playButton}  
+        variants={playButtonVariants}
+        onClick={(e) => {
         e.stopPropagation();
         playSong(playlist);
         }}>
           <FaPlay />
-        </button>
+        </motion.button>
       </div>
 
       <h3>{playlist.title}</h3>
 
       <p>{playlist.description}</p>
-    </article>
+    </motion.article>
   );
 }
 

@@ -1,0 +1,31 @@
+export const pageVariants = {
+  hidden: {
+    opacity: 0,
+  },
+
+  visible: {
+    opacity: 1,
+
+    transition: {
+      duration: 0.45,
+      when: "beforeChildren",
+      staggerChildren: 0.12,
+    },
+  },
+};
+
+export const sectionVariants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+
+  visible: {
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      duration: 0.45,
+    },
+  },
+};
