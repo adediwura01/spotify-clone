@@ -1,7 +1,9 @@
 import styles from "./Player.module.css";
+import { usePlayer } from "../../context/PlayerContext";
 
 import {
   IoPlay,
+  IoPause,
   IoPlaySkipBack,
   IoPlaySkipForward,
 } from "react-icons/io5";
@@ -12,6 +14,7 @@ import {
 } from "react-icons/lu";
 
 function PlaybackControls() {
+    const { isPlaying, togglePlay } = usePlayer();
   return (
     <section className={styles.controls}>
       <div className={styles.buttonRow}>
@@ -22,9 +25,11 @@ function PlaybackControls() {
         <button className={styles.controlButton}>
           <IoPlaySkipBack />
         </button>
-
-        <button className={styles.playButton}>
-          <IoPlay />
+        
+        <button
+          className={styles.playButton} onClick={togglePlay}
+        >
+           {isPlaying ? <IoPause /> : <IoPlay />}
         </button>
 
         <button className={styles.controlButton}>

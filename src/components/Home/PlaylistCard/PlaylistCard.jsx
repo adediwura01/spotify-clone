@@ -4,11 +4,11 @@ import { usePlayer } from "../../../context/PlayerContext";
 
 function PlaylistCard({ playlist }) {
   const { playSong } = usePlayer();
+  const { isPlaying, togglePlay } = usePlayer();
 
   return (
     <article
       className={styles.card}
-      onClick={() => playSong(playlist)}
     >
       <div className={styles.cover}>
         <img
@@ -17,7 +17,10 @@ function PlaylistCard({ playlist }) {
           className={styles.image}
         />
 
-        <button className={styles.playButton}>
+        <button className={styles.playButton}  onClick={(e) => {
+        e.stopPropagation();
+        playSong(playlist);
+        }}>
           <FaPlay />
         </button>
       </div>
