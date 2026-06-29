@@ -1,9 +1,11 @@
 import styles from "./Section.module.css";
 import PlaylistCard from "../PlaylistCard/PlaylistCard";
+import { motion } from "framer-motion";
+import { sectionVariants,} from "../../../animations";
 
 function Section({ title, playlists }) {
   return (
-    <section className={styles.section}>
+    <motion.section className={styles.section}  variants={sectionVariants}>
       <div className={styles.header}>
         <h2>{title}</h2>
 
@@ -20,7 +22,7 @@ function Section({ title, playlists }) {
         />
 ))}
       </div>
-    </section>
+    </motion.section>
   );
 }
 

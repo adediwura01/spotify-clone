@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import styles from "./Hero.module.css";
 import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
+import { motion } from "framer-motion";
+import { sectionVariants } from "../../../animations";
 
 function Hero() {
   const [hour, setHour] = useState(new Date().getHours());
@@ -14,7 +16,7 @@ function Hero() {
 
   let greetingText = "Good Evening";
   let GreetingIcon = IoMoonOutline;
-  let timeClass = styles.evening; // Fallback / default class
+  let timeClass = styles.evening; 
 
   if (hour < 12) {
     greetingText = "Good Morning";
@@ -27,7 +29,8 @@ function Hero() {
   }
 
   return (
-    <section className={styles.hero}>
+    <motion.section className={styles.hero}
+      variants={sectionVariants}>
       <div>
         <h1 className={styles.title}>
           {greetingText}, Adeniregun{" "}
@@ -37,7 +40,7 @@ function Hero() {
           Welcome back. Ready to discover your next favorite song?
         </p>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
