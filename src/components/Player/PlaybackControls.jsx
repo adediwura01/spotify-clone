@@ -27,9 +27,12 @@ function PlaybackControls() {
         </button>
         
         <button
-          className={styles.playButton} onClick={togglePlay}
+           className={styles.playButton}
+           onClick={togglePlay}
         >
-           {isPlaying ? <IoPause /> : <IoPlay />}
+            <span className={styles.playIcon}>
+              {isPlaying ? <IoPause /> : <IoPlay />}
+           </span>
         </button>
 
         <button className={styles.controlButton}>
