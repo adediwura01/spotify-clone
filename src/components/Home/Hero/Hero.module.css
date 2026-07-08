@@ -1,65 +1,209 @@
 .hero {
+  position: relative;
+  min-height: 430px;
+  display: flex;
+  align-items: center;
   padding: 2.5rem;
+  margin-bottom: 3rem;
+  overflow: hidden;
+  border-radius: 28px;
+  isolation: isolate;
+}
 
-  border-radius: 18px;
+/* ===========================
+   Background
+=========================== */
+
+.background {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transform: scale(1.08);
+
+  filter: brightness(0.95) saturate(1.15);
+
+  transition: transform 0.8s ease;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
 
   background: linear-gradient(
-    135deg,
-    rgba(29, 185, 84, .18),
-    rgba(29, 185, 84, .05)
+    90deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.6) 30%,
+    rgba(0, 0, 0, 0.2) 55%,
+    rgba(0, 0, 0, 0.05) 75%,
+    transparent 100%
   );
 
-  margin-bottom: 2rem;
+  z-index: 1;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: .75rem;
+.heroGlow {
+  position: absolute;
+
+  top: 50%;
+  right: -120px;
+
+  transform: translateY(-50%);
+
+  width: 520px;
+  height: 520px;
+
+  border-radius: 50%;
+
+  background: #1db954;
+
+  opacity: 0.15;
+
+  filter: blur(140px);
+
+  pointer-events: none;
+
+  z-index: 0;
 }
 
-.hero p {
-  max-width: 600px;
+/* ===========================
+   Content
+=========================== */
 
-  color: var(--text-secondary);
+.heroPanel {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===========================
+   Typography
+=========================== */
+
+.greeting {
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.25em;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  margin-bottom: 1rem;
+}
+
+.heroTitle {
+  font-size: clamp(4rem, 7vw, 5.5rem);
+
+  line-height: 0.9;
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+
+  color: white;
+
+  margin-bottom: 1rem;
+}
+
+.heroDescription {
+  max-width: 500px;
+
+  font-size: 1.1rem;
+
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  margin-bottom: 0.75rem;
+}
+
+.heroMeta {
+  font-size: 0.95rem;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  margin-bottom: 1.2rem;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.buttonRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.playButton {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  padding: 1rem 1.8rem;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background: #1ed760;
+
+  color: black;
 
   font-size: 1rem;
 
-  line-height: 1.7;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
 }
 
-.title {
+.playButton:hover {
+  transform: translateY(-2px) scale(1.03);
+
+  filter: brightness(1.08);
+}
+
+.iconButton {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 10px; /* Spaces out text and icon */
+
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
 }
 
-.greetingIcon {
-  font-size: 1.2em; /* Scales dynamically with text size */
-  vertical-align: middle;
-}
+.iconButton:hover {
+  background: rgba(255, 255, 255, 0.14);
 
-.title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.greetingIcon {
-  font-size: 1.2em;
-  transition: color 0.3s ease; /* Smooth transition if time changes */
-}
-
-/* 🌅 Soft, warm amber gold for morning energy */
-.morning {
-  color: #d97706; 
-}
-
-/* 🌤️ Balanced, crisp copper orange for productive afternoons */
-.afternoon {
-  color: #ea580c; 
-}
-
-/* 🌙 Deep slate blue or elegant indigo for relaxed evening vibes */
-.evening {
-  color: #6366f1; 
+  transform: translateY(-2px);
 }
